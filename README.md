@@ -1,4 +1,4 @@
-# Retail Analytics Platform – SQL | Python | Tableau
+# Customer RFM Segmentation & Analytics Dashboard
 
 An end-to-end retail analytics solution designed to transform raw transactional data into actionable business insights using advanced SQL engineering, Python-based customer segmentation, and Tableau executive dashboards.
 
@@ -101,17 +101,20 @@ Executive dashboard includes:
 
 ##  Tableau Dashboard – RFM Segmentation
 
-###  Champions Segment
-<img src="tableau/champions.png" width="900">
+### Executive RFM Dashboard – Regular Segment
+<img src="tableau/01_regular_segment.png" width="900">
 
-###  Loyal Customers
-<img src="tableau/loyal_customers.png" width="900">
+### High-Value Champions Segment Analysis
+<img src="tableau/02_champions_segment.png" width="900">
 
-###  At Risk Customers
-<img src="tableau/at_risk.png" width="900">
+### Loyal Customer Behavioral Insights
+<img src="tableau/03_loyal_segment.png" width="900">
 
-###  Regular Customers
-<img src="tableau/regular.png" width="900">
+### At-Risk Customer Churn Identification
+<img src="tableau/04_at_risk_segment.png" width="900">
+
+### Interactive RFM Scatter with Median Quadrants
+<img src="tableau/05_rfm_scatter.png" width="900">>
 
 ---
 
