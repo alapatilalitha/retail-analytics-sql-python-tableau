@@ -4,9 +4,9 @@ An end-to-end retail analytics solution designed to transform raw transactional 
 
 ---
 
-## 🚀 Project Overview
+##  Project Overview
 
-This project simulates a real-world analytics workflow in a retail environment.
+The workflow emphasizes data quality validation, scalable SQL design, and analytics mart construction to support BI reporting.
 
 It demonstrates:
 
@@ -20,7 +20,7 @@ It demonstrates:
 
 ---
 
-## 🎯 Business Problems Solved
+##  Business Problems Solved
 
 ✔ Identify high-value and at-risk customers  
 ✔ Measure month-over-month revenue growth  
@@ -30,23 +30,22 @@ It demonstrates:
 ✔ Deliver executive-ready KPI dashboard  
 
 ---
-
-## 🏗 Architecture
+##  Architecture
 
 Raw MySQL Tables  
 → Data Validation & Referential Integrity Checks  
 → KPI & Analytics Views  
 → Advanced SQL (Window Functions, Cohort, Funnel)  
 → Python RFM Segmentation  
-→ Push Segments to MySQL  
+→ Persist Segments to MySQL  
 → Customer Analytics Mart  
 → Tableau Executive Dashboard  
 
 ---
 
-## 🧠 Technical Implementation
+##  Technical Implementation
 
-### 🔹 SQL Engineering (MySQL 8)
+###  SQL Engineering (MySQL 8)
 
 - Data validation & integrity checks
 - Join explosion detection & grain control
@@ -64,7 +63,7 @@ Raw MySQL Tables
 
 ---
 
-### 🔹 Python – RFM Customer Segmentation
+###  Python – RFM Customer Segmentation
 
 Built using:
 
@@ -83,11 +82,11 @@ Customer Segments:
 - Regular
 - At Risk
 
-Segments are automatically pushed back into MySQL for downstream analytics.
+Segments are automatically written back into MySQL, enabling downstream BI reporting and structured analytics mart integration.
 
 ---
 
-### 🔹 Business Intelligence (Tableau)
+###  Business Intelligence (Tableau)
 
 Executive dashboard includes:
 
@@ -100,30 +99,57 @@ Executive dashboard includes:
 
 ---
 
-## 📂 Project Structure
+##  Tableau Dashboard – RFM Segmentation
 
+###  Champions Segment
+<img src="tableau/champions.png" width="900">
+
+###  Loyal Customers
+<img src="tableau/loyal_customers.png" width="900">
+
+###  At Risk Customers
+<img src="tableau/at_risk.png" width="900">
+
+###  Regular Customers
+<img src="tableau/regular.png" width="900">
+
+---
+
+##  Project Structure
 
 retail-analytics-sql-python-tableau/
 │
 ├── python/
-│ └── rfm_analysis.py
+│   └── rfm_analysis.py
 │
 ├── sql/
-│ ├── 00_database_setup.sql
-│ ├── 01_data_validation.sql
-│ ├── 02_relationship_checks.sql
-│ ├── 03_kpi_views.sql
-│ ├── 04_window_analysis.sql
-│ ├── 05_cohort_analysis.sql
-│ ├── 06_funnel_analysis.sql
+│   ├── 00_database_setup.sql
+│   ├── 01_data_validation.sql
+│   ├── 02_relationship_checks.sql
+│   ├── 03_kpi_views.sql
+│   ├── 04_window_analysis.sql
+│   ├── 05_cohort_analysis.sql
+│   ├── 06_funnel_analysis.sql
+│
+├── tableau/
+│   ├── champions.png
+│   ├── loyal_customers.png
+│   ├── at_risk.png
+│   └── regular.png
 │
 ├── README.md
 └── .gitignore
 
-
 ---
 
-## 🛠 Tech Stack
+##  Performance & Optimization
+
+- Controlled join grain to prevent row explosion
+- Used window functions for scalable time-based analytics
+- Designed reusable KPI views to minimize query redundancy
+- Structured analytics mart for BI tool efficiency
+
+##  Tech Stack
 
 - MySQL 8
 - Advanced SQL (CTEs, Window Functions)
@@ -134,11 +160,18 @@ retail-analytics-sql-python-tableau/
 
 ---
 
-## 📈 Key Outcomes
+##  Key Outcomes
 
-- Built reusable analytics views for scalable reporting
+- Engineered reusable analytics views to support scalable KPI reporting
 - Designed BI-ready customer analytics mart
 - Implemented full RFM segmentation pipeline
 - Applied production-style SQL engineering best practices
 - Delivered executive-level performance dashboard
+
+##  Business Insights Summary
+
+- Champions represent 3.4% of customers but drive the highest average revenue.
+- Loyal customers contribute consistent recurring revenue.
+- At-risk customers show declining engagement — opportunity for targeted retention.
+- Regular customers form the majority base and provide steady revenue flow.
 
